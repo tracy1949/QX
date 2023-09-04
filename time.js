@@ -46,7 +46,7 @@ async function time() {
         content += "\n"+areas[i][0]+" "+calcTime(u)+" UTC" + u;
     }
 	
-    $notification.post('当前时间', "", content);
+    $notify('当前时间', "", content);
     $done();
 }
 
