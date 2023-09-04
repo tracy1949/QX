@@ -95,7 +95,7 @@ async function time() {
         content += "\n"+areas[i][0]+" "+calcTime(u)+" UTC" + u + g;
     }
  
-    $notify('今日时间',  dt[d.getDate()] + month[d.getUTCMonth()] +  weekday[d.getDay()], content);
+    $notify('当前时间',  dt[d.getDate()] + month[d.getUTCMonth()] +  weekday[d.getDay()], content);
     $done();
 }
 
