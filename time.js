@@ -26,28 +26,28 @@ const areas = [
            ]
 var d = new Date();
     var month=new Array(12);
-    month[0]="January";
-    month[1]="February";
-    month[2]="March";
-    month[3]="April";
-    month[4]="May";
-    month[5]="June";
-    month[6]="July";
-    month[7]="August";
-    month[8]="September";
-    month[9]="October";
-    month[10]="November";
-    month[11]="December";
+    month[0]="  January  ";
+    month[1]="  February  ";
+    month[2]="  March  ";
+    month[3]="  April  ";
+    month[4]="  May  ";
+    month[5]="  June  ";
+    month[6]="  July  ";
+    month[7]="  August";
+    month[8]="  September  ";
+    month[9]="  October  ";
+    month[10]="  November  ";
+    month[11]="  December  ";
 
 var d = new Date();
 var weekday = new Array(7);
-weekday[0] = "Sunday";
-weekday[1] = "Monday";
-weekday[2] = "Tuesday";
-weekday[3] = "Wednesday";
-weekday[4] = "Thursday";
-weekday[5] = "Friday";
-weekday[6] = "Saturday";
+weekday[0] = "Sunday  ";
+weekday[1] = "Monday  ";
+weekday[2] = "Tuesday ";
+weekday[3] = "Wednesday  ";
+weekday[4] = "Thursday  ";
+weekday[5] = "Friday  ";
+weekday[6] = "Saturday  ";
 
 var d = new Date();
 var dt = new Array(31);
@@ -82,7 +82,11 @@ dt[28]="28th";
 dt[29]="29th";
 dt[30]="30th";
 dt[31]="31st";
- 
+
+var utc = d.getTime(); 
+var nd = new Date(); 
+     
+
 time();
 
 async function time() {
@@ -95,7 +99,7 @@ async function time() {
         content += "\n"+areas[i][0]+" "+calcTime(u)+" UTC" + u + g;
     }
  
-    $notify('当前时间',  dt[d.getDate()] + month[d.getUTCMonth()] +  weekday[d.getDay()], content);
+    $notify('当前时间', '       '+nd.format("hh:mm:ss       ")+dt[d.getDate()] + month[d.getUTCMonth()] + weekday[d.getDay()],content+ nd.format("  a"));
     $done();
 }
 
@@ -105,7 +109,7 @@ function calcTime(offset) {
                                      
    var utc = d.getTime() + (d.getTimezoneOffset() * 60000); 
     var nd = new Date(utc + (3600000 * offset)); 
-    return nd.format("yyyy年MM月dd日 a hh:mm:ss"); 
+    return nd.format("   yyyy年MM月dd日 "); 
    
 }
 
