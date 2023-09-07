@@ -41,13 +41,13 @@ var d = new Date();
 
 var d = new Date();
 var weekday = new Array(7);
-weekday[0] = "Sunday  ";
-weekday[1] = "Monday  ";
-weekday[2] = "Tuesday ";
-weekday[3] = "Wednesday  ";
-weekday[4] = "Thursday  ";
-weekday[5] = "Friday  ";
-weekday[6] = "Saturday  ";
+weekday[0] = "  Sunday  ";
+weekday[1] = "  Monday  ";
+weekday[2] = "  Tuesday ";
+weekday[3] = "  Wednesday  ";
+weekday[4] = "  Thursday  ";
+weekday[5] = "  Friday  ";
+weekday[6] = "  Saturday  ";
 
 var d = new Date();
 var dt = new Array(31);
@@ -99,7 +99,7 @@ async function time() {
         content += "\n"+areas[i][0]+" "+calcTime(u)+" UTC" + u + g;
     }
  
-    $notify('当前时间', '       '+nd.format("hh:mm:ss       ")+dt[d.getDate()] + month[d.getUTCMonth()] + weekday[d.getDay()],content+ nd.format("  a"));
+    $notify('当前时间：        ' +nd.format("hh:mm:ss"),'     '+ month[d.getUTCMonth()] +dt[d.getDate()] +weekday[d.getDay()],content+ nd.format("  a"));
     $done();
 }
 
