@@ -92,14 +92,14 @@ time();
 async function time() {
  var now = new Date(); 
  var content = "";
- var week = "    "+calcTime(+8)+" 星期" + "一二三四五六天".charAt(now.getDay());
+ var week = "    "+calcTime(+8)+" 星期" + "天一二三四五六".charAt(now.getDay());
  content += week;
  for (var i in areas) {
   var u = valPlus(areas[i][1]);
         content += "\n"+areas[i][0]+" "+calcTime(u)+" UTC" + u + g;
     }
  
-    $notify('当前时间：        ' +nd.format("hh:mm:ss"),'     '+ month[d.getUTCMonth()] +dt[d.getDate()] +weekday[d.getDay()],content+ nd.format("  a"));
+    $notify('当前时间：        ' +nd.format("hh:mm:ss"),'      '+ month[d.getUTCMonth()] +dt[d.getDate()] +weekday[d.getDay()],content+ nd.format("  a"));
     $done();
 }
 
