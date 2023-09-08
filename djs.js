@@ -42,7 +42,7 @@ function dateDiff(startDate, endDate) {
 }
 
 const dayarr = [ 
-    [ "今年" ,"2023-01-01" ],
+    [ "今年","2023-01-01" ],
     [ "今年","2023-12-31" ],
 ]
 
