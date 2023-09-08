@@ -72,7 +72,3 @@ function valcal(days) {
     else
         return "已过:" + Math.abs(days) + "天"
 }
-
-Nssurge (https://community.nssurge.com/d/33-scripting)
-Scripting - Surge Tech Community
-The forum is only for Surge technical discussions. License and other questions please contact support@nssurge.com.
