@@ -26,7 +26,7 @@ const $ = API("exchange");
 const currencyNames = {
     CNY: ["人民币", "🇨🇳"],
     USD: ["美元", "🇺🇸"],
-    AU: ["澳币", AU"],
+    AUD: ["澳币", 🇦🇺"],
     EUR: ["欧元", "🇪🇺"],
     GBP: ["英镑", "🇬🇧"],
     HKD: ["港币", "🇭🇰"],
